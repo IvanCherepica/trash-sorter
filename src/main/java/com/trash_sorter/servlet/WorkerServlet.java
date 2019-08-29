@@ -1,6 +1,7 @@
 package com.trash_sorter.servlet;
 
 import com.google.gson.Gson;
+import com.trash_sorter.model.Result;
 import com.trash_sorter.service.HashSearch;
 import com.trash_sorter.service.TrashService;
 import com.trash_sorter.service.TrashServiceIMPL;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @WebServlet("/worker")
@@ -20,16 +22,30 @@ public class WorkerServlet extends HttpServlet {
     long id = TankServlet.id;
     private Set<String> barCodeList = new HashSet<>();
 
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-//        String code = req.getParameter("barCode");
-        String code =req.getParameter("txts");
+        boolean isvalidate;
+        String code = req.getParameter("barCode");
+//        String code =req.getParameter("txts");
         TrashService trashService = TrashServiceIMPL.getInstance();
 
         String[] barcode = trashService.getTrashName(code);
 
-        boolean can_drop = HashSearch.search(trashService.getAllTrashById(id), barcode);
-        //barCodeList.add(barcode);
+        List<String> list = trashService.getAllTrashById(1);
+
+        String result = HashSearch.search(trashService.getAllTrashById(1), barcode);
+        resp.setContentType("application/json");
+        resp.setCharacterEncoding("UTF-8");
+        if (result !=null) {
+            isvalidate = true;
+            Result trueResult = new Result(code, result, isvalidate);
+            resp.getWriter().write(new Gson().toJson(trueResult)); }
+        else {
+            isvalidate = false;
+            Result falseResult = new Result(code, "Вам запрещено его выкидывать в мусорник", isvalidate);
+            resp.getWriter().write(new Gson().toJson(falseResult));
+        }
     }
 
     @Override
