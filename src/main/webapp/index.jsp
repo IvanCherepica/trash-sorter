@@ -11,7 +11,7 @@
     <meta name="author" content="">
 
     <title>Trashsorter</title>
-
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7/dist/dbr.min.js" data-productKeys="t0068NQAAABlYrAlwmz2H9BHvuIS4k0Q+zj50En/ivBru9D5GH26Q4uTzr30pdAenDwBAmm3HU28X4ltHqXoEL22UeVLoeDw="></script>
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -80,9 +80,39 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                    <h2 class="mb-5">Загрузите фото штрихкода, чтобы узнать можно ли выкинуть</h2>
-
+                    <h2 class="mb-5">Загрузите фото штрихкода, чтобы узнать можно ли ли выкинуть</h2>
+                    <input id="iptDecodeImg" type="file" >
                     <p class="lead mb-0"><button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#exampleModal">Загрузить код</button></p>
+                    <script>
+                        let reader;
+
+                        document.getElementById('iptDecodeImg').addEventListener('change', async function(){
+                            if(!reader){
+                                reader = await Dynamsoft.BarcodeReader.createInstance();
+                            }
+                            reader.decode(this.files[0]).then(results => {
+                                if (results.length > 0) {
+                                    console.log(results);
+                                    var txts = [];
+                                    for (var i = 0; i < results.length; ++i) {
+                                        txts.push(results[i].BarcodeText);
+                                    }
+                                    alert(txts.join("\n"));
+                                    this.value = '';
+                                }
+                                else
+                                {
+                                    alert("No barcode found.");
+                                    this.value = '';
+                                }
+                            });
+                        });
+                        $.ajax({
+                            method: 'POST',
+                            url: 'http://localhost:8080/worker',
+                            data: {'txts': txts}
+                        })
+                    </script>
                 </div>
             </div>
             <div class="col-lg-6">
