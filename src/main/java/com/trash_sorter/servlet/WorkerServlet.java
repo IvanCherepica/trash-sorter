@@ -22,8 +22,8 @@ public class WorkerServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String code = req.getParameter("barCode");
-
+//        String code = req.getParameter("barCode");
+        String code =req.getParameter("txts");
         TrashService trashService = TrashServiceIMPL.getInstance();
 
         String[] barcode = trashService.getTrashName(code);
