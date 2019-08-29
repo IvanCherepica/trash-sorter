@@ -92,3 +92,6 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
+Будет удалено .idea/artifacts/trash_sorter_1_war.xml
+Будет удалено .idea/artifacts/trash_sorter_1_war_exploded.xml
+Будет удалено .idea/trash-sorter-1.iml
