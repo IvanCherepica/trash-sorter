@@ -67,7 +67,7 @@ public class TrashDaoImpl implements TrashDAO {
         Trash trash = null;
         try{
             Query query = session.createQuery(
-                    "from Trash where category_id=:id");
+                    "from Trash where id=:id");
             query.setParameter("id",id);
 
             trash = (Trash) query.uniqueResult();
