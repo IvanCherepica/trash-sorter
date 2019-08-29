@@ -1,7 +1,5 @@
 package com.trash_sorter.dao;
 
-
-
 import com.trash_sorter.model.Category;
 
 import java.util.List;

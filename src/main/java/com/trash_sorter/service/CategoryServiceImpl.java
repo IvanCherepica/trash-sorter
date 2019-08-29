@@ -1,20 +1,20 @@
 package com.trash_sorter.service;
 
-
-
 import com.trash_sorter.dao.CategoryDAO;
-import com.trash_sorter.dao.CategoryDaoFactory;
 import com.trash_sorter.dao.CategoryDaoImpl;
 import com.trash_sorter.model.Category;
+import com.trash_sorter.util.Builder;
+import com.trash_sorter.util.DbHelper;
 
 import java.util.List;
 
 public class CategoryServiceImpl implements CategoryService {
+    DbHelper helper = DbHelper.getInstance(Builder.getConfiguration());
     private final CategoryDAO dao;
 
     private static volatile CategoryServiceImpl instance;
     private CategoryServiceImpl() {
-        this.dao = new CategoryDaoFactory().getDao();
+        this.dao = new CategoryDaoImpl(helper.getFactory());
     }
     public static CategoryServiceImpl getInstance(){
         if (instance == null){

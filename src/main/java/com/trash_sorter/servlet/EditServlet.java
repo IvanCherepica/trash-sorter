@@ -1,7 +1,5 @@
 package com.trash_sorter.servlet;
 
-
-
 import com.trash_sorter.model.Category;
 import com.trash_sorter.service.CategoryServiceImpl;
 
