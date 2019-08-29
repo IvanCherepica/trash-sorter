@@ -15,7 +15,8 @@ public class Builder {
         Properties properties = new Properties();
         Builder builder = new Builder();
         try(InputStream is = builder.getClass().getClassLoader()
-                .getResourceAsStream("/hibernatePROP.properties")){
+                .getResourceAsStream("/hibernatePROP.properties"
+                )){
             properties.load(is);
             value = properties.getProperty(propName);
         }catch (IOException e){
