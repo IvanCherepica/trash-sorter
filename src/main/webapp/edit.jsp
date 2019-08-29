@@ -30,7 +30,7 @@
     </c:forEach>
 </table>
 
-<input type="button" id="sendSelectedCategory"/>
+<input type="button" id="sendSelectedCategory" value="Change">
 
 <script>
 
@@ -38,7 +38,10 @@
         $.ajax({
             method: 'POST',
             url: '/admin/receiver',
-            data: {ids: JSON.stringify(getSelectedIds())},
+            data: {
+                tankId: $_GET('id'),
+                ids: JSON.stringify(getSelectedIds())
+            },
             success: function(response){
                 console.log('succes')
             },
@@ -66,6 +69,12 @@
         });
         console.log(values);
     });
+
+    function $_GET(key) {
+        var p = window.location.search;
+        p = p.match(new RegExp(key + '=([^&=]+)'));
+        return p ? p[1] : false;
+    }
 </script>
 
 </body>

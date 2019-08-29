@@ -23,8 +23,9 @@
             <td>${tank.id}</td>
             <td>${tank.tankName}</td>
             <td>
+
                 <a href="${pageContext.servletContext.contextPath}/admin/edit?id=${tank.id}">Edit</a>
-                <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${tank.id}">Delete</a>
+                <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${tank.id}&item=tank">Delete</a>
             </td>
         </tr>
     </c:forEach>
@@ -40,8 +41,10 @@
             <td>${category.id}</td>
             <td>${category.trashCategoria}</td>
             <td>
-                <a href="${pageContext.servletContext.contextPath}/admin/edit?id=${category.id}">Edit</a>
-                <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${category.id}">Delete</a>
+<%--                <a href="${pageContext.servletContext.contextPath}/admin/edit?id=${category.id}">Edit</a>--%>
+                Edit
+                <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${category.id}&item=category">
+                    Delete</a>
             </td>
         </tr>
     </c:forEach>
@@ -57,8 +60,9 @@
             <td>${trash.id}</td>
             <td>${trash.name}</td>
             <td>
-                <a href="${pageContext.servletContext.contextPath}/admin/edit?id=${trash.id}">Edit</a>
-                <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${trash.id}">Delete</a>
+<%--                <a href="${pageContext.servletContext.contextPath}/admin/edit?id=${trash.id}">Edit</a>--%>
+                Edit
+                <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${trash.id}&item=trash">Delete</a>
             </td>
         </tr>
     </c:forEach>
