@@ -1,7 +1,8 @@
 package com.trash_sorter.dao;
 
-import com.trash_sorter.model.Trash;
 
+import com.trash_sorter.model.Trash;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -20,8 +21,10 @@ public class TrashDaoImpl implements TrashDAO {
         Session session = factory.openSession();
         List<String> trash;
         try{
-            trash = (List<String>) session.createQuery(
-                    "select name from Trash where category_id=" +id).list();
+            Query query = session.createQuery("select name from Trash where category_id=:id");
+            query.setParameter("id",id);
+
+            trash = (List<String>)query.list();
         }finally {
             session.close();
         }
@@ -55,5 +58,24 @@ public class TrashDaoImpl implements TrashDAO {
             session.close();
         }
         return true;
+    }
+
+    @Override
+    public Trash getTrashById(long id) {
+        Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+        Trash trash = null;
+        try{
+            Query query = session.createQuery(
+                    "from Trash where category_id=:id");
+            query.setParameter("id",id);
+
+            trash = (Trash) query.uniqueResult();
+        }catch (Exception e){
+            transaction.rollback();
+        }finally {
+            session.close();
+        }
+        return trash;
     }
 }

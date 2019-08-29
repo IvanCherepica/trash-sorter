@@ -5,7 +5,6 @@ import com.trash_sorter.service.HashSearch;
 import com.trash_sorter.service.TrashService;
 import com.trash_sorter.service.TrashServiceIMPL;
 
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

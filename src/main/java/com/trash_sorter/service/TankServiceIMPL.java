@@ -1,18 +1,20 @@
 package com.trash_sorter.service;
 
-
 import com.trash_sorter.dao.TankDAO;
-import com.trash_sorter.dao.TankDaoFactory;
+import com.trash_sorter.dao.TankDaoImpl;
 import com.trash_sorter.model.Tank;
+import com.trash_sorter.util.Builder;
+import com.trash_sorter.util.DbHelper;
 
 import java.util.List;
 
 public class TankServiceIMPL implements TankService {
+    DbHelper helper = DbHelper.getInstance(Builder.getConfiguration());
     private final TankDAO dao;
 
     private static volatile TankServiceIMPL instance;
     private TankServiceIMPL(){
-        this.dao = new TankDaoFactory().getDao();
+        this.dao = new TankDaoImpl(helper.getFactory());
     }
     public static TankServiceIMPL getInstance(){
         if (instance == null){
@@ -42,10 +44,5 @@ public class TankServiceIMPL implements TankService {
     @Override
     public List<Tank> getTanks() {
         return dao.getTanks();
-    }
-
-    @Override
-    public void editTanksCategory(long tankId, long categoryId) {
-        dao.editTanksCategory(tankId,categoryId);
     }
 }

@@ -1,9 +1,10 @@
 package com.trash_sorter.service;
 
-
 import com.trash_sorter.dao.TrashDAO;
-import com.trash_sorter.dao.TrashDaoFactory;
+import com.trash_sorter.dao.TrashDaoImpl;
 import com.trash_sorter.model.Trash;
+import com.trash_sorter.util.Builder;
+import com.trash_sorter.util.DbHelper;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 
@@ -17,14 +18,13 @@ import java.net.URL;
 import java.util.List;
 
 public class TrashServiceIMPL implements TrashService {
+    DbHelper helper = DbHelper.getInstance(Builder.getConfiguration());
     private final TrashDAO dao;
 
     private static volatile TrashServiceIMPL instance;
-
     private TrashServiceIMPL(){
-        this.dao = new TrashDaoFactory().getDao();
+        this.dao = new TrashDaoImpl(helper.getFactory());
     }
-
     public static TrashServiceIMPL getInstance(){
         if (instance == null){
             synchronized (TrashServiceIMPL.class){
@@ -92,5 +92,10 @@ public class TrashServiceIMPL implements TrashService {
     @Override
     public boolean deleteTrash(Trash trash) {
         return dao.deleteTrash(trash);
+    }
+
+    @Override
+    public Trash getTrashById(long id) {
+        return dao.getTrashById(id);
     }
 }

@@ -73,19 +73,5 @@ public class TankDaoImpl implements TankDAO {
         return tanks;
     }
 
-    @Override
-    public void editTanksCategory(long tankId, long categoryId) {
-        Session session = factory.openSession();
-        Transaction transaction = session.beginTransaction();
-        try{
 
-
-            transaction.commit();
-        }catch (Exception e){
-            System.out.println("Can't edit " + e.getMessage());
-            transaction.rollback();
-        }finally {
-            session.close();
-        }
-    }
 }
