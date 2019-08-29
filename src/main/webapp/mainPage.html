@@ -4,27 +4,44 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        ul{
-            list-style: none;
-        }
-        ul li{
-            margin-top: 10px;
+        #tab{
+            display: flex;
         }
     </style>
 </head>
 <body>
 
-<ul>
-    <li>
-        <a href="glass.html" target="_blank">glass</a>
-    </li>
-    <li>
-        <a href="plastic.html" target="_blank">plastic</a>
-    </li>
-    <li>
-        <a href="paper.html" target="_blank">paper</a>
-    </li>
-</ul>
+<div id="tab">
+
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Бак для бумаги</td>
+            <td>
+                <a href="${pageContext.servletContext.contextPath}/admin/edit?id=${tank.id}">Edit</a>
+                <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${tank.id}">Delete</a>
+            </td>
+            <td>
+                <img src="https://www.imageup.ru/img137/3462748/20190826_231052.jpg" width="200" height="200">
+            </td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Бак для пластика</td>
+            <td>
+                <a href="${pageContext.servletContext.contextPath}/admin/edit?id=${tank.id}">Edit</a>
+                <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${tank.id}">Delete</a>
+            </td>
+
+        </tr>
+    </table>
+
+</div>
 
 </body>
 </html>

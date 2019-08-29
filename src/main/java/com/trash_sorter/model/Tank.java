@@ -15,6 +15,8 @@ public class Tank {
     @Column(name = "tank_name")
     private String tankName;
 
+    private String qr;
+
     @ManyToMany(cascade = { CascadeType.ALL })
     @JoinTable(
             name = "tanks_and_cats",
@@ -36,6 +38,10 @@ public class Tank {
 
     public String getTankName() {
         return tankName;
+    }
+
+    public String getQr() {
+        return qr;
     }
 
     @Override

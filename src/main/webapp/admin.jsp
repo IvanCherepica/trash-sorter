@@ -10,24 +10,33 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+
+    </style>
 </head>
 <body>
+
 
 <table border="1" cellpadding="5">
     <tr>
         <th>ID</th>
         <th>Name</th>
+        <th>QR-code</th>
     </tr>
     <c:forEach items="${tanks}" var="tank" varStatus="status">
         <tr>
             <td>${tank.id}</td>
             <td>${tank.tankName}</td>
+            <td>${tank.qr}</td>
             <td>
                 <a href="${pageContext.servletContext.contextPath}/admin/edit?id=${tank.id}">Edit</a>
                 <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${tank.id}">Delete</a>
             </td>
         </tr>
     </c:forEach>
+    <%--<td>--%>
+        <%--<img src="https://www.imageup.ru/img137/3462748/20190826_231052.jpg" width="200" height="200">--%>
+    <%--</td>--%>
 </table>
 
 <table border="1" cellpadding="5">
@@ -63,6 +72,5 @@
         </tr>
     </c:forEach>
 </table>
-
 </body>
 </html>
