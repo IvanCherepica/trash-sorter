@@ -2,6 +2,7 @@ package com.trash_sorter.servlet;
 
 import com.google.gson.Gson;
 import com.trash_sorter.model.Category;
+import com.trash_sorter.model.Tank;
 import com.trash_sorter.service.*;
 
 import javax.servlet.RequestDispatcher;
@@ -15,6 +16,8 @@ import java.util.List;
 
 @WebServlet("/admin/edit")
 public class EditServlet extends HttpServlet {
+    private CategoryService categoryService = CategoryServiceImpl.getInstance();
+    private TankService tankService = TankServiceIMPL.getInstance();
     /**
      * все изменения нужны для привязки к категориям
      * получаем список всех категорий и перекидываем на edit.jsp
@@ -22,7 +25,12 @@ public class EditServlet extends HttpServlet {
      * */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Category> categories = CategoryServiceImpl.getInstance().getAllCategories();
+        long tankId = Long.parseLong(req.getParameter("id"));
+
+        List<Category> categories = categoryService.getAllCategories();
+        Tank tank = tankService.getTankById(tankId);
+
+        req.setAttribute("tank", tank);
         req.setAttribute("categs",categories);
 
         resp.setContentType("text/html");
