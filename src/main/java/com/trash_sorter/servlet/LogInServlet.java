@@ -1,7 +1,5 @@
 package com.trash_sorter.servlet;
 
-
-
 import com.trash_sorter.model.Admin;
 import com.trash_sorter.service.AdminService;
 import com.trash_sorter.service.AdminServiceIMPL;
@@ -37,7 +35,7 @@ public class LogInServlet extends HttpServlet {
             HttpSession session = req.getSession();
             session.setAttribute("admin",admin);
             resp.setContentType("text/html");
-            resp.sendRedirect("/admin");
+            resp.sendRedirect("admin");
         }else
             resp.sendRedirect("login");
     }

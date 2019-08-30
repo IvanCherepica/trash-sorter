@@ -16,12 +16,13 @@ public class TankDaoImpl implements TankDAO {
     }
 
     @Override
-    public boolean addNewTank(Tank tank) {
+    public boolean addNewTank(Tank tankName) {
         Session session = factory.openSession();
         Transaction transaction = session.beginTransaction();
         try{
-            session.save(tank);
+            session.save(tankName);
             transaction.commit();
+            return false;
         }catch (Exception e){
             System.out.println("Can't add " + e.getMessage());
             transaction.rollback();
@@ -73,19 +74,5 @@ public class TankDaoImpl implements TankDAO {
         return tanks;
     }
 
-    @Override
-    public void editTanksCategory(long tankId, long categoryId) {
-        Session session = factory.openSession();
-        Transaction transaction = session.beginTransaction();
-        try{
 
-
-            transaction.commit();
-        }catch (Exception e){
-            System.out.println("Can't edit " + e.getMessage());
-            transaction.rollback();
-        }finally {
-            session.close();
-        }
-    }
 }

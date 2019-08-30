@@ -21,7 +21,7 @@ public class AdminDaoImpl implements AdminDAO {
 
         Admin admin = null;
         try {
-            Query query = session.createQuery("from AdminServlet where name=:admin");
+            Query query = session.createQuery("from Admin where name=:admin");
             query.setParameter("admin",adminName);
 
             admin = (Admin) query.uniqueResult();

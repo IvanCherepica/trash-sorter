@@ -30,15 +30,19 @@
     </c:forEach>
 </table>
 
-<input type="button" id="sendSelectedCategory"/>
+<input type="button" id="sendSelectedCategory" value="Change">
 
 <script>
 
     $('#sendSelectedCategory').on('click', function () {
         $.ajax({
             method: 'POST',
-            url: '/admin/receiver',
-            data: {ids: JSON.stringify(getSelectedIds())},
+            url: '/admin/edit',
+            data: {
+                tankId: $_GET('id'),
+                itemType: $_GET('item'),
+                ids: JSON.stringify(getSelectedIds())
+            },
             success: function(response){
                 console.log('succes')
             },
@@ -66,6 +70,12 @@
         });
         console.log(values);
     });
+
+    function $_GET(key) {
+        var p = window.location.search;
+        p = p.match(new RegExp(key + '=([^&=]+)'));
+        return p ? p[1] : false;
+    }
 </script>
 
 </body>
