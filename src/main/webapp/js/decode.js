@@ -24,6 +24,11 @@ function getTrashAnswer(barCode) {
         async: false,
         success:  function(t) {
             result = t;
+            if(result.isvalidate) {
+                showSuccessContent(result);
+            } else {
+                showDeniedContent(result);
+            }
         },
         error: function (e) {
             console.log(e);
@@ -48,7 +53,7 @@ function showSuccessContent(trash) {
 
 }
 
-function showDeniedContent() {
+function showDeniedContent(trash) {
     let contentBlock = $('#a1');
     contentBlock.empty();
 
@@ -84,7 +89,7 @@ function getDecodedCode(){
                     txts.push(results[i].BarcodeText);
                 }
                 //var barCode = txts.join("\n");
-                showSuccessContent(getTrashAnswer(txts.join("\n")));
+                getTrashAnswer(txts.join("\n"));
                 //console.log(getTrashAnswer(txts.join("\n")));
 
                 this.value = '';
