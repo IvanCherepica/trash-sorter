@@ -9,6 +9,7 @@ import java.util.Set;
 @Table(name = "categories")
 public class Category {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private long id;
 
@@ -24,6 +25,10 @@ public class Category {
     private Set<Category> categories = new HashSet<>();
 
     public Category() {
+    }
+
+    public Category(String trashCategoria) {
+        this.trashCategoria = trashCategoria;
     }
 
     public Category(long id, String trashCategoria) {

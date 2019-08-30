@@ -16,12 +16,13 @@ public class TankDaoImpl implements TankDAO {
     }
 
     @Override
-    public boolean addNewTank(Tank tank) {
+    public boolean addNewTank(Tank tankName) {
         Session session = factory.openSession();
         Transaction transaction = session.beginTransaction();
         try{
-            session.save(tank);
+            session.save(tankName);
             transaction.commit();
+            return false;
         }catch (Exception e){
             System.out.println("Can't add " + e.getMessage());
             transaction.rollback();

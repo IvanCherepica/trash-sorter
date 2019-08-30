@@ -9,4 +9,6 @@ public interface TrashDAO {
     List<String> getAllTrashById(long id);
     List<Trash> getAllTrash();
     Trash getTrashById(long id);
+    boolean addNewTrash(Trash trashName);
+    boolean addNewCategory(long trash_id, long cat_id);
 }

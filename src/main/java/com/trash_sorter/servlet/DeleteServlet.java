@@ -11,9 +11,10 @@ import java.io.IOException;
 
 @WebServlet("/admin/delete")
 public class DeleteServlet extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Long id = Long.parseLong(req.getParameter("id"));
+        long id = Long.parseLong(req.getParameter("id"));
         String table_name = req.getParameter("item");
 
         switch (table_name){

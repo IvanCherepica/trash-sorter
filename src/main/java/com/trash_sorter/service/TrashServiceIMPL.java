@@ -98,4 +98,14 @@ public class TrashServiceIMPL implements TrashService {
     public Trash getTrashById(long id) {
         return dao.getTrashById(id);
     }
+
+    @Override
+    public boolean addNewTrash(Trash trashName) {
+        return dao.addNewTrash(trashName);
+    }
+
+    @Override
+    public boolean addNewCategory(long trash_id, long cat_id) {
+        return dao.addNewCategory(trash_id,cat_id);
+    }
 }

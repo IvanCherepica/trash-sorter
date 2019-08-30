@@ -27,8 +27,8 @@ public class TankServiceIMPL implements TankService {
     }
 
     @Override
-    public boolean addNewTank(Tank tank) {
-        return dao.addNewTank(tank);
+    public boolean addNewTank(Tank tankName) {
+        return dao.addNewTank(tankName);
     }
 
     @Override

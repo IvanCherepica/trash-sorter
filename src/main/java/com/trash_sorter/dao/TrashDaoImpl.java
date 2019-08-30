@@ -78,4 +78,41 @@ public class TrashDaoImpl implements TrashDAO {
         }
         return trash;
     }
+
+    @Override
+    public boolean addNewTrash(Trash trashName) {
+        Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            session.save(trashName);
+            transaction.commit();
+            return true;
+        }catch (Exception e){
+            transaction.rollback();
+        }finally {
+            session.close();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean addNewCategory(long trash_id, long cat_id) {
+        Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            Query query = session.createSQLQuery(
+                    "UPDATE trash SET category_id=? WHERE id=?");
+            query.setParameter(0,cat_id);
+            query.setParameter(1,trash_id);
+            query.executeUpdate();
+
+            transaction.commit();
+            return true;
+        }catch (Exception e){
+            transaction.rollback();
+        }finally {
+            session.close();
+        }
+        return false;
+    }
 }

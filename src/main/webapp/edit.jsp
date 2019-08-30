@@ -37,9 +37,10 @@
     $('#sendSelectedCategory').on('click', function () {
         $.ajax({
             method: 'POST',
-            url: '/admin/receiver',
+            url: '/admin/edit',
             data: {
                 tankId: $_GET('id'),
+                itemType: $_GET('item'),
                 ids: JSON.stringify(getSelectedIds())
             },
             success: function(response){

@@ -16,11 +16,11 @@ public class CategoryDaoImpl implements CategoryDAO {
     }
 
     @Override
-    public boolean addNewCategory(Category cat) {
+    public boolean addNewCategory(Category catName) {
         Session session = factory.openSession();
         Transaction transaction = session.beginTransaction();
         try{
-            session.save(cat);
+            session.save(catName);
             transaction.commit();
         }catch (Exception e){
             e.printStackTrace();

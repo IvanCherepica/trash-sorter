@@ -26,8 +26,8 @@ public class CategoryServiceImpl implements CategoryService {
         return instance;
     }
     @Override
-    public boolean addNewCategory(Category cat) {
-        return dao.addNewCategory(cat);
+    public boolean addNewCategory(Category catName) {
+        return dao.addNewCategory(catName);
     }
 
     @Override
