@@ -45,4 +45,14 @@ public class TankServiceIMPL implements TankService {
     public List<Tank> getTanks() {
         return dao.getTanks();
     }
+
+    @Override
+    public Tank getTankByName(String name) {
+        return dao.getTankByName(name);
+    }
+
+    @Override
+    public boolean addQR(String qr, long id) {
+        return dao.addQR(qr,id);
+    }
 }

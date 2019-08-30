@@ -16,15 +16,21 @@ import java.io.IOException;
 public class AddServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String itemType = req.getParameter("itemType");
-        String itemName = req.getParameter("itemName");
+        String itemType = "tank_add";//req.getParameter("itemType");
+        String itemName = req.getParameter("tankName");
 
         switch (itemType){
             case "tank_add":
                 TankService tank_service = TankServiceIMPL.getInstance();
-                //здесь генерится qr
-                String qr = "abcd";
-                tank_service.addNewTank(new Tank(itemName,qr));
+                //обавляем в таблицу новый бак, тем самым прихерачив к нему id
+                //имея его, мы могём сгенерить qr и присобачить его update'ом
+                //getTankByID()
+                Tank tank = new Tank(itemName);
+                tank_service.addNewTank(tank);
+                long id = tank_service.getTankByName(itemName).getId();
+                String qr = new QrService().getQrUrl(id,300);
+                tank_service.addQR(qr,id);
+
                 break;
             case "category_add":
                 CategoryService category_service = CategoryServiceImpl.getInstance();

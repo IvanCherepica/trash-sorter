@@ -9,4 +9,6 @@ public interface TankDAO {
     boolean deleteTank(Tank tank);
     Tank getTankById(long id);
     List<Tank> getTanks();
+    Tank  getTankByName(String name);
+    boolean addQR(String qr, long id);
 }

@@ -24,13 +24,13 @@
             <td>${categ.id}</td>
             <td>${categ.trashCategoria}</td>
             <td>
-                <input type="checkbox" class="editor" value=${categ.id}>Add to tank
+                <label><input type="checkbox" class="editor" value=${categ.id}>Add</label>
             </td>
         </tr>
     </c:forEach>
 </table>
 
-<input type="button" id="sendSelectedCategory" value="Change">
+<input type="button" id="sendSelectedCategory" value="Save changes">
 
 <script>
 

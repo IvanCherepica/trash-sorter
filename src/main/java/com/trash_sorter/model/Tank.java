@@ -34,10 +34,6 @@ public class Tank {
         this.tankName = name;
     }
 
-    public Tank(String tankName, String qr) {
-        this.tankName = tankName;
-        this.qr = qr;
-    }
 
     public String getQr() {
         return qr;

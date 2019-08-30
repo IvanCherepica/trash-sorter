@@ -22,6 +22,7 @@ public class Builder {
             properties.load(is);
             value = properties.getProperty(propName);
         }catch (IOException e){
+            System.out.println("Ошибка чтения файла");
             e.printStackTrace();
         }
 
