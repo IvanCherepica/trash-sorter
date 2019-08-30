@@ -24,10 +24,4 @@ public class QrService {
 
         return url;
     }
-
-    public static void main(String[] args) {
-        QrService service = new QrService();
-
-        System.out.println(service.getQrUrl(1, 250));
-    }
 }
