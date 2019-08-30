@@ -1,7 +1,7 @@
 
 function decode(){
     let reader;
-    document.getElementById('iptDecodeImg').addEventListener('change', async function(){
+    document.getElementById('inputGroupFile01').addEventListener('change', async function(){
         if(!reader){
             reader = await Dynamsoft.BarcodeReader.createInstance();
         }
@@ -20,12 +20,12 @@ function decode(){
                     data: {'barCode': barCode},
                     success:  function(t) {
                         if (t.isvalidate) {
-                            $('#barcode').text(t.barcode);
-                            $('#nametrash').text(t.name);
+                            $('#barcode').text(t.barcode),
+                            $('#nametrash').text(t.name),
                             $('#exampleModal').modal('show');
-                        } else
+                        } if (t.isvalidate == false) {
                             $('#errorModal').modal('show');
-
+                        }
 
 
 
@@ -52,5 +52,10 @@ function decode(){
     });
 }
 
+$(document).ready(function () {
+    $('#inputGroupFile01').on('click', function () {
+        decode();
+    })
+})
 
                     

@@ -19,7 +19,7 @@
     <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/landing-page.min.css" rel="stylesheet">
 
@@ -102,11 +102,21 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                    <h2 class="mb-5">Загрузите фото штрихкода, чтобы узнать можно ли а выкинуть</h2>
-                    <label for="inputbutton" class="uploadButton">Загрузить файл</label>
-                        <div id ="inputbutton">
-                    <p class="lead mb-0"><input  id="iptDecodeImg" onclick="decode()" type="file" accept="image/bmp,image/jpeg,image/png,image/gif"></p>
+                    <h2 class="mb-5">Загрузите фото штрихкода, чтобы узнать можно ли выкинуть</h2>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Загрузка</span>
                         </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01">
+                            <label class="custom-file-label" for="inputGroupFile01">Выберите файл</label>
+                        </div>
+                    </div>
+
+
+<%--                    <p  class="lead mb-0"><input  id="iptDecodeImg" onclick="decode()" type="file" accept="image/bmp,image/jpeg,image/png,image/gif"></p>--%>
+
                 </div>
             </div>
             <div class="col-lg-6">
