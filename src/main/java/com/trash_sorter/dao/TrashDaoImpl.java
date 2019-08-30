@@ -21,7 +21,12 @@ public class TrashDaoImpl implements TrashDAO {
         Session session = factory.openSession();
         List<String> trash;
         try{
-            Query query = session.createQuery("select name from Trash where category_id=:id");
+//            Query query = session.createQuery("select name from Trash where category_id=:id");
+            Query query = session.createSQLQuery("SELECT name FROM trash t WHERE t.category_id IN (\n" +
+                    "    SELECT c.id FROM categories c WHERE c.id IN (\n" +
+                    "        SELECT tac.category_id FROM tanks_and_cats tac WHERE tac.tank_id=:id\n" +
+                    "    )\n" +
+                    "    )");
             query.setParameter("id",id);
 
             trash = (List<String>)query.list();

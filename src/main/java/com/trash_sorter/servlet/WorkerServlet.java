@@ -31,9 +31,9 @@ public class WorkerServlet extends HttpServlet {
 
         String[] barcode = trashService.getTrashName(code);
 
-        List<String> list = trashService.getAllTrashById(1);
+        List<String> list = trashService.getAllTrashById(id);
 
-        String result = HashSearch.search(trashService.getAllTrashById(1), barcode);
+        String result = HashSearch.search(trashService.getAllTrashById(id), barcode);
         resp.setContentType("application/json");
         resp.setCharacterEncoding("UTF-8");
         if (result !=null) {
