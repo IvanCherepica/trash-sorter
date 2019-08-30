@@ -1,15 +1,18 @@
+<!DOCTYPE html>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
-  Created by IntelliJ IDEA.
-  User: andrei
-  Date: 28.08.2019
-  Time: 1:42
-  To change this template use File | Settings | File Templates.
+Created by IntelliJ IDEA.
+User: andrei
+Date: 28.08.2019
+Time: 1:42
+To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Title</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
 
@@ -22,9 +25,10 @@
         <tr>
             <td>${tank.id}</td>
             <td>${tank.tankName}</td>
+            <td>${tank.qr}</td>
             <td>
-                <a href="${pageContext.servletContext.contextPath}/admin/edit?id=${tank.id}">Edit</a>
-                <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${tank.id}">Delete</a>
+                <a href="${pageContext.servletContext.contextPath}/admin/edit?id=${tank.id}&item=tank">Edit</a>
+                <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${tank.id}&item=tank">Delete</a>
             </td>
         </tr>
     </c:forEach>
@@ -40,8 +44,7 @@
             <td>${category.id}</td>
             <td>${category.trashCategoria}</td>
             <td>
-                <a href="${pageContext.servletContext.contextPath}/admin/edit?id=${category.id}">Edit</a>
-                <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${category.id}">Delete</a>
+                <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${category.id}&item=category">Delete</a>
             </td>
         </tr>
     </c:forEach>
@@ -57,8 +60,8 @@
             <td>${trash.id}</td>
             <td>${trash.name}</td>
             <td>
-                <a href="${pageContext.servletContext.contextPath}/admin/edit?id=${trash.id}">Edit</a>
-                <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${trash.id}">Delete</a>
+                <a href="${pageContext.servletContext.contextPath}/admin/edit?id=${trash.id}&item=trash">Edit</a>
+                <a href="${pageContext.servletContext.contextPath}/admin/delete?id=${trash.id}&item=trash">Delete</a>
             </td>
         </tr>
     </c:forEach>

@@ -1,7 +1,8 @@
 package com.trash_sorter.filter;
 
-import com.trash_sorter.model.Admin;
 
+
+import com.trash_sorter.model.Admin;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

@@ -7,6 +7,7 @@ import java.util.Objects;
 @Table(name = "trash")
 public class Trash {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private long id;
 
@@ -29,6 +30,10 @@ public class Trash {
         this.id = -1;
         this.name=name;
         this.categoryModel = categoryModel;
+    }
+
+    public Trash(String catName){
+        this.name = catName;
     }
 
     public Trash(int id, String name, Category categoryModel) {

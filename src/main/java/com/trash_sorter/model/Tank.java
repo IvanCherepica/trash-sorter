@@ -9,11 +9,15 @@ import java.util.Set;
 @Table(name = "tanks")
 public class Tank {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private long id;
 
     @Column(name = "tank_name")
     private String tankName;
+
+    @Column(name = "qr")
+    private String qr;
 
     @ManyToMany(cascade = { CascadeType.ALL })
     @JoinTable(
@@ -28,6 +32,15 @@ public class Tank {
 
     public Tank(String name) {
         this.tankName = name;
+    }
+
+    public Tank(String tankName, String qr) {
+        this.tankName = tankName;
+        this.qr = qr;
+    }
+
+    public String getQr() {
+        return qr;
     }
 
     public long getId() {

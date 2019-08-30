@@ -1,7 +1,8 @@
 package com.trash_sorter.dao;
 
-import com.trash_sorter.model.Trash;
 
+import com.trash_sorter.model.Trash;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -20,8 +21,10 @@ public class TrashDaoImpl implements TrashDAO {
         Session session = factory.openSession();
         List<String> trash;
         try{
-            trash = (List<String>) session.createQuery(
-                    "select name from Trash where category_id=" +id).list();
+            Query query = session.createQuery("select name from Trash where category_id=:id");
+            query.setParameter("id",id);
+
+            trash = (List<String>)query.list();
         }finally {
             session.close();
         }
@@ -55,5 +58,61 @@ public class TrashDaoImpl implements TrashDAO {
             session.close();
         }
         return true;
+    }
+
+    @Override
+    public Trash getTrashById(long id) {
+        Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+        Trash trash = null;
+        try{
+            Query query = session.createQuery(
+                    "from Trash where id=:id");
+            query.setParameter("id",id);
+
+            trash = (Trash) query.uniqueResult();
+        }catch (Exception e){
+            transaction.rollback();
+        }finally {
+            session.close();
+        }
+        return trash;
+    }
+
+    @Override
+    public boolean addNewTrash(Trash trashName) {
+        Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            session.save(trashName);
+            transaction.commit();
+            return true;
+        }catch (Exception e){
+            transaction.rollback();
+        }finally {
+            session.close();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean addNewCategory(long trash_id, long cat_id) {
+        Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            Query query = session.createSQLQuery(
+                    "UPDATE trash SET category_id=? WHERE id=?");
+            query.setParameter(0,cat_id);
+            query.setParameter(1,trash_id);
+            query.executeUpdate();
+
+            transaction.commit();
+            return true;
+        }catch (Exception e){
+            transaction.rollback();
+        }finally {
+            session.close();
+        }
+        return false;
     }
 }
