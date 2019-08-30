@@ -51,14 +51,9 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12" id="a1">
+                            <img src="img/loading.gif" align="center" width="290px">
 
-
-                            <p><strong>Наименование чая: </strong><div id="name"></div></p>
-                            <p><strong>Штрихкод: </strong><div id="barcode"></div></p>
-                            <p><strong>Это тот товар:</strong></p>
-                            <p><button type="button"  Style="width:100%" class="btn btn-success" onclick="$('#a1').empty().prepend('<h4><strong>ВЫ МОЖЕТЕ ВЫКИДЫВАТЬ МУСОР\'</h4></strong>').prepend($('<img>',{id:'#a1',src:'img/yes.png'}));" data-dismiss="modal">Да</button></p>
-
-                            <p><button type="button"  Style="width:100%" class="btn btn-danger" onclick="$('#a1').empty().prepend('<h4><strong>ВЫ НЕ МОЖЕТЕ ВЫКИДЫВАТЬ МУСОР\'</h4></strong>').prepend($('<img>',{id:'#a1',src:'img/no.png'}));" data-dismiss="modal" >Нет</button></p></div>
+                            </div>
                     </div>
 
                 </div>
