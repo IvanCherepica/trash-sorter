@@ -18,13 +18,14 @@ import java.util.Set;
 
 @WebServlet("/worker")
 public class WorkerServlet extends HttpServlet {
-    long id = TankServlet.id;
-    private Set<String> barCodeList = new HashSet<>();
+
 
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         boolean isvalidate;
+
+        long id = Long.parseLong(req.getParameter("tankId") );
         String code = req.getParameter("barCode");
 //        String code =req.getParameter("txts");
         TrashService trashService = TrashServiceIMPL.getInstance();
@@ -49,11 +50,11 @@ public class WorkerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String json = new Gson().toJson(barCodeList);
+       // String json = new Gson().toJson(barCodeList);
 
         resp.setContentType("application/json");
         resp.setCharacterEncoding("UTF-8");
-        resp.getWriter().write(json);
+       // resp.getWriter().write(json);
         resp.setStatus(HttpServletResponse.SC_OK);
     }
 }

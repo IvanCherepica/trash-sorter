@@ -14,13 +14,16 @@ $(document).ready(function () {
     })
 });
 
-function getTrashAnswer(barCode) {
+function getTrashAnswer(tankId, barCode) {
     let result = null;
 
     $.ajax({
         method: 'post',
         url: '/worker',
-        data: {'barCode': barCode},
+        data: {
+            'tankId': tankId,
+            'barCode': barCode
+        },
         async: false,
         success:  function(t) {
             result = t;
@@ -36,6 +39,12 @@ function getTrashAnswer(barCode) {
     });
 
     return result;
+}
+
+function getTankId() {
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    return url.searchParams.get("id");
 }
 
 function showSuccessContent(trash) {
@@ -89,7 +98,7 @@ function getDecodedCode(){
                     txts.push(results[i].BarcodeText);
                 }
                 //var barCode = txts.join("\n");
-                getTrashAnswer(txts.join("\n"));
+                getTrashAnswer(getTankId(), txts.join("\n"));
                 //console.log(getTrashAnswer(txts.join("\n")));
 
                 this.value = '';
