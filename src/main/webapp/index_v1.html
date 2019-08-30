@@ -1,0 +1,3395 @@
+<!DOCTYPE html>
+
+<!-- кодировка для Java -->
+<!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>-->
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Landing Page - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Меню -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">TrashSorter admin</a>
+      <a class="btn btn-primary" href="#">Выход</a>
+    </div>
+  </nav>
+
+  <!-- Таблица "Мусорные баки" -->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+        <div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Пластик<button type="button" class="btn btn-success" onclick="$('#a1').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Стекло<button type="button" class="btn btn-success" onclick="$('#a2').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Бумага<button type="button" class="btn btn-success" onclick="$('#a3').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+		<!-- Описание таблицы "Мусорные баки" с кнопкой добавить -->
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусорные баки</h2>
+          <p class="lead mb-0">Краткое описание мусорных баков, какие типы, чем отличаются</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo">Добавить бак</button>
+			<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel1">Добавить бак</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name1" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name1">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+      <!-- отображение по первой кнопке a1 -->
+	  <div class="col-lg-12 order-lg-2 my-auto showcase-text" >
+	  <div class="row no-gutters" id="a1" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Категория1<button type="button" class="btn btn-success" onclick="$('#b1_1').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Категория2<button type="button" class="btn btn-success" onclick="$('#b2_1').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Категория3<button type="button" class="btn btn-success" onclick="$('#b3_1').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Категория4<button type="button" class="btn btn-success" onclick="$('#b4_1').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Категория5<button type="button" class="btn btn-success" onclick="$('#b5_1').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Категория6<button type="button" class="btn btn-success" onclick="$('#b6_1').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+		<!--Описание таблицы "Категории мусора" с кнопкой добавить-->
+        <div class="col-lg-6 my-auto showcase-text text-center"> 
+          <h2>Категории мусора</h2>
+          <p class="lead mb-0">Краткое описание категорий мусора, чем отличаются, какие варианты бывают</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">Добавить категорию</button>
+			<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel2">Добавить категорию</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name2" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name2">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	  <!-- отображение по второй кнопке a2 -->
+	  <div class="col-lg-12 order-lg-2 my-auto showcase-text" >
+	  <div class="row no-gutters" id="a2" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Категория1<button type="button" class="btn btn-success" onclick="$('#b1_2').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Категория2<button type="button" class="btn btn-success" onclick="$('#b2_2').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Категория3<button type="button" class="btn btn-success" onclick="$('#b3_2').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Категория4<button type="button" class="btn btn-success" onclick="$('#b4_2').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Категория5<button type="button" class="btn btn-success" onclick="$('#b5_2').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Категория6<button type="button" class="btn btn-success" onclick="$('#b6_2').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+		<!--Описание таблицы "Категории мусора" с кнопкой добавить-->
+        <div class="col-lg-6 my-auto showcase-text text-center">
+          <h2>Категории мусора</h2>
+          <p class="lead mb-0">Краткое описание категорий мусора, чем отличаются, какие варианты бывают</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3" data-whatever="@mdo">Добавить категорию</button>
+			<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel3">Добавить категорию</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name3" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name3">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	  <!-- отображение по третей кнопке a3 -->
+	  <div class="col-lg-12 order-lg-2 my-auto showcase-text" >
+	  <div class="row no-gutters" id="a3" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Категория1<button type="button" class="btn btn-success" onclick="$('#b1_3').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Категория2<button type="button" class="btn btn-success" onclick="$('#b2_3').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Категория3<button type="button" class="btn btn-success" onclick="$('#b3_3').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Категория4<button type="button" class="btn btn-success" onclick="$('#b4_3').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Категория5<button type="button" class="btn btn-success" onclick="$('#b5_3').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Категория6<button type="button" class="btn btn-success" onclick="$('#b6_3').toggle();">Подробнее</button></td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+		<!-- Описание таблицы "Категории мусора" с кнопкой добавить -->
+        <div class="col-lg-6 my-auto showcase-text text-center">
+          <h2>Категории мусора</h2>
+          <p class="lead mb-0">Краткое описание категорий мусора, чем отличаются, какие варианты бывают</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4" data-whatever="@mdo">Добавить категорию</button>
+			<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel4">Добавить категорию</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name4" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name4">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	  </div>
+	  </div>
+      <div class="row no-gutters" id="b1_1" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal5" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel5">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name5" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name5">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	    <div class="row no-gutters" id="b2_1" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal6" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel6">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name6" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name6">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	    <div class="row no-gutters" id="b3_1" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal7" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel7">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name7" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name7">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	    <div class="row no-gutters" id="b4_1" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal8" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel8">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name8" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name8">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b5_1" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal9" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel9">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name9" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name9">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	    <div class="row no-gutters" id="b6_1" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal10" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel10">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name10" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name10">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	    <div class="row no-gutters" id="b1_2" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal11" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel11">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name11" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name11">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b2_2" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal12" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel12">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name12" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name12">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b3_2" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal13" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal13" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel13">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name13" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name13">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b4_2" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal14" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal14" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel14">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name14" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name14">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b5_2" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal15" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal15" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel15">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name15" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name15">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b6_2" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal16" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal16" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel16">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name16" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name16">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b1_3" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal17" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal17" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel17">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name17" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name17">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b2_3" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal18" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal18" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel18">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name18" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name18">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b3_3" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal19" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal19" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel19">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name19" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name19">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b4_3" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal20" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal20" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel20">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name20" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name20">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b5_3" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal21" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal21" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel21">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name21" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name21">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b6_3" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal22" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal22" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel22">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name22" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name22">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b1_4" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal23" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal23" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel23">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name23" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name23">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b2_4" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal24" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal24" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel24">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name24" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name24">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b3_4" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal25" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal25" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel25">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name25" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name25">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b4_4" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal26" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal26" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel26">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name26" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name26">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b5_4" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal27" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal27" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel27">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name27" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name27">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b6_4" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal28" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal28" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel28">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name28" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name28">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b1_5" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal29" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal29" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel29">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name29" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name29">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b2_5" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal30" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal30" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel30">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name30" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name30">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b3_5" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal31" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal31" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel31">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name31" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name31">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b4_5" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal32" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal32" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel32">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name32" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name32">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b5_5" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal33" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal33" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel33">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name33" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name33">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b6_5" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal34" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal34" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel34">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name34" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name34">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b1_6" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal35" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal35" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel35">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name35" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name35">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b2_6" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal36" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal36" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel36">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name36" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name36">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b3_6" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal37" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal37" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel37">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name37" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name37">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b4_6" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal38" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal38" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel38">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name38" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name38">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b5_6" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal39" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal39" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel39">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name39" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name39">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+	        <div class="row no-gutters" id="b6_6" style="display:none">
+		<div class="col-lg-6 order-lg-2 my-auto showcase-text">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+			  <table class="table table-bordered table-striped mb-0">
+				<thead>
+				  <tr>
+					<th scope="col">#</th>
+					<th scope="col">Наименование</th>
+					<th scope="col">Изменить</th>
+					<th scope="col">Удалить</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">1</th>
+					<td>Мусор1</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">2</th>
+					<td>Мусор2</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td>Мусор3</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">4</th>
+					<td>Мусор4</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">5</th>
+					<td>Мусор5</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				  <tr>
+					<th scope="row">6</th>
+					<td>Мусор6</td>
+					<td>ссылка</td>
+					<td>ссылка</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>  
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
+          <h2>Мусор</h2>
+          <p class="lead mb-0">Варианты мусора, описание, кратко и по делу</p>
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal40" data-whatever="@mdo">Добавить тип мусора</button>
+			<div class="modal fade" id="exampleModal40" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel40">Добавить тип мусора</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name40" class="col-form-label">Наименование:</label>
+						<input type="text" class="form-control" id="recipient-name40">
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary">Сохранить</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+      </div>
+    </div>
+	</div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">О нас</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Контакты</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Условия</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Политика конфиденциальности</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; TrashSorted 2019. Все правва защищены.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
