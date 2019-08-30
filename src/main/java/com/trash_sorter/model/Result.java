@@ -9,12 +9,18 @@ public class Result {
     String name;
     boolean isvalidate;
 
-
-
     public Result(String barcode, String name, boolean isvalidate) {
         this.barcode = barcode;
         this.name = name;
         this.isvalidate = isvalidate;
+    }
+
+    public String getBarcode() {
+        return barcode;
+    }
+
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
     }
 
     public String getName() {
@@ -31,14 +37,6 @@ public class Result {
 
     public void setIsvalidate(boolean isvalidate) {
         this.isvalidate = isvalidate;
-    }
-
-    public String getBarcode() {
-        return barcode;
-    }
-
-    public void setBarcode(String barcode) {
-        this.barcode = barcode;
     }
 
     @Override

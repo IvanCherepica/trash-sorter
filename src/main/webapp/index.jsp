@@ -40,51 +40,28 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header" c1>
                 <h5 class="modal-title" id="exampleModalLabel">Информация о мусоре</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" >
 
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-6"><p><strong>Изображение товара </strong></p>
-                            <p><img src="img/1.jpg"></div>
-                        <div class="col-md-6"><p><strong> </strong>Информация о товаре: </strong><br /><div id="nametrash"></div></p>
+                        <div class="col-md-12" id="a1">
+
+
+                            <p><strong>Наименование чая: </strong><div id="name"></div></p>
                             <p><strong>Штрихкод: </strong><div id="barcode"></div></p>
                             <p><strong>Это тот товар:</strong></p>
-                            <p><button type="button" Style="width:100%" class="btn btn-success" onclick="$('#target1').toggle();">Да</button></p>
-                            <p><button type="button" Style="width:100%" class="btn btn-danger" onclick="$('#target2').toggle();" >Нет</button></p></div>
-                    </div>
-                    <div class="row">
-                        <p><br /></p>
-                        <div class="col-md-6" id="target1" style="display:none"><p><br /></p>	<button type="button" class="btn btn-success" Style="width:100%">Вы можете выкинуть</button></div>
-                        <div class="col-md-6" id="target2" style="display:none"><p><br /></p>	<p><button type="button" class="btn btn-danger" Style="width:100%">Вам нельзя выкидывать</button></div>
+                            <p><button type="button"  Style="width:100%" class="btn btn-success" onclick="$('#a1').empty().prepend('<h4><strong>ВЫ МОЖЕТЕ ВЫКИДЫВАТЬ МУСОР\'</h4></strong>').prepend($('<img>',{id:'#a1',src:'img/yes.png'}));" data-dismiss="modal">Да</button></p>
 
+                            <p><button type="button"  Style="width:100%" class="btn btn-danger" onclick="$('#a1').empty().prepend('<h4><strong>ВЫ НЕ МОЖЕТЕ ВЫКИДЫВАТЬ МУСОР\'</h4></strong>').prepend($('<img>',{id:'#a1',src:'img/no.png'}));" data-dismiss="modal" >Нет</button></p></div>
                     </div>
+
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" >Закрыть</button>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal" tabindex="-1" id="errorModal" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Неправильный мусор</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p><button type="button" class="btn btn-danger" height="50" Style="width:100%"><strong>ВЫ НЕ МОЖЕТЕ ВЫКИДЫВАТЬ</strong></button></p>
             </div>
             <div class="modal-footer">
 
@@ -93,6 +70,35 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">Информация о мусоре</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12" >
+                        <h4><strong>ВЫ НЕ МОЖЕТЕ ВЫКИДЫВАТЬ МУСОР</strong></h4>
+                        <img src="img/no.png">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <!-- Masthead -->
@@ -105,9 +111,7 @@
                     <h2 class="mb-5">Загрузите фото штрихкода, чтобы узнать можно ли выкинуть</h2>
 
                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Загрузка</span>
-                        </div>
+
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="inputGroupFile01">
                             <label class="custom-file-label" for="inputGroupFile01">Выберите файл</label>
@@ -115,7 +119,7 @@
                     </div>
 
 
-<%--                    <p  class="lead mb-0"><input  id="iptDecodeImg" onclick="decode()" type="file" accept="image/bmp,image/jpeg,image/png,image/gif"></p>--%>
+
 
                 </div>
             </div>

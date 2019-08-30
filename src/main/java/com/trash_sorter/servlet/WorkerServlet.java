@@ -39,11 +39,11 @@ public class WorkerServlet extends HttpServlet {
         resp.setCharacterEncoding("UTF-8");
         if (result !=null) {
             isvalidate = true;
-            Result trueResult = new Result(code, result, isvalidate);
+            Result trueResult = new Result(code,result, isvalidate);
             resp.getWriter().write(new Gson().toJson(trueResult)); }
         else {
             isvalidate = false;
-            Result falseResult = new Result(code, "Вам запрещено его выкидывать в мусорник", isvalidate);
+            Result falseResult = new Result(code,"Данный товар не найден в базе", isvalidate);
             resp.getWriter().write(new Gson().toJson(falseResult));
         }
     }

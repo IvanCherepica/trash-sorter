@@ -20,10 +20,10 @@ function decode(){
                     data: {'barCode': barCode},
                     success:  function(t) {
                         if (t.isvalidate) {
-                            $('#barcode').text(t.barcode),
-                            $('#nametrash').text(t.name),
+                            $('#name').text(t.name);
+                            $('#barcode').text(t.barcode);
                             $('#exampleModal').modal('show');
-                        } if (t.isvalidate == false) {
+                        } else {
                             $('#errorModal').modal('show');
                         }
 
