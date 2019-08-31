@@ -18,7 +18,7 @@ import java.net.URL;
 import java.util.List;
 
 public class TrashServiceIMPL implements TrashService {
-    DbHelper helper = DbHelper.getInstance(Builder.getConfiguration());
+    private DbHelper helper = DbHelper.getInstance(Builder.getConfiguration());
     private final TrashDAO dao;
 
     private static volatile TrashServiceIMPL instance;
