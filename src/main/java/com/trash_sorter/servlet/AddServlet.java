@@ -16,6 +16,10 @@ import java.io.IOException;
 public class AddServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        req.setCharacterEncoding("UTF-8");
+        resp.setContentType("text/html;charset=UTF-8");
+
         String itemType = "tank_add";//req.getParameter("itemType");
         String itemName = req.getParameter("tankName");
         switch (itemType){

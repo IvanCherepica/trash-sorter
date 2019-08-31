@@ -53,7 +53,6 @@
                         <img class="img-fluid" class="img-responsive" src="${tank.qr}">
                         <h3>QR код</h3>
                         <!-- <p class="lead mb-0">бумага</p> -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo">Распечатать</button>
                         <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -83,8 +82,7 @@
                 ​
             </div>
             <div class="col-lg-6 order-lg-1 my-auto showcase-text text-center">
-                <h2>Мусорный бак для бумаги</h2>
-                <p class="lead mb-0">Краткое описание мусорных баков, какие типы, чем отличаются</p>
+                <h1>${tank.tankName}</h1>
             </div>
         </div>
         <div class="row no-gutters">

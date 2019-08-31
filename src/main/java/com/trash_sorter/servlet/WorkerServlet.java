@@ -2,6 +2,7 @@ package com.trash_sorter.servlet;
 
 import com.google.gson.Gson;
 import com.trash_sorter.model.Result;
+import com.trash_sorter.model.Trash;
 import com.trash_sorter.service.HashSearch;
 import com.trash_sorter.service.TrashService;
 import com.trash_sorter.service.TrashServiceIMPL;
@@ -15,6 +16,7 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @WebServlet("/worker")
 public class WorkerServlet extends HttpServlet {
@@ -43,7 +45,11 @@ public class WorkerServlet extends HttpServlet {
             resp.getWriter().write(new Gson().toJson(trueResult)); }
         else {
             isvalidate = false;
-            Result falseResult = new Result(code,"Данный товар не найден в базе", isvalidate);
+
+            List<String> names = trashService.getAllTrash().stream().map(Trash::getName).collect(Collectors.toList());
+            String result1 = HashSearch.search(names, barcode);
+
+            Result falseResult = new Result(code,result1, isvalidate);
             resp.getWriter().write(new Gson().toJson(falseResult));
         }
     }

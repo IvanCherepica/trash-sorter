@@ -8,10 +8,7 @@
     <title>Title</title>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -46,8 +43,8 @@
                         </li>
                     </ul>
                     <h4>Добавить новый бак</h4>
-                    <p><form action="${pageContext.servletContext.contextPath}/addUser" method="POST">
-                    <p><label>name: <input type="text" name="name"></label></p>
+                    <p><form action="${pageContext.servletContext.contextPath}/admin/add" method="POST">
+                    <p><label>name: <input type="text" name="tankName"></label></p>
                     <p><input type="submit" align="center" value="Submit"/></p>
 
 
