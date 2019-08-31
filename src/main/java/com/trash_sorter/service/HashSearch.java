@@ -14,7 +14,15 @@ public class HashSearch {
      * то быстрее будет это использовать для нахождения уникальныого мусора
      * @return boolean, но это нужно изменить в соответствии с логикой  общения с бд
      * */
+
+
+
     public static String search(List<String> trash_list, String[] net_array){
+
+
+
+
+
         String name = null;
         boolean can_drop = false;
         HashSet<String> words_set = new HashSet<>();
@@ -41,6 +49,28 @@ public class HashSearch {
                 }
             }
         }
+        StringBuilder queryBuilder = new StringBuilder(
+                "SELECT * FROM tanks t WHERE t.id IN (\n" +
+                        "    SELECT tac.tank_id FROM tanks_and_cats tac WHERE tac.category_id IN (\n" +
+                        "        SELECT category_id FROM trash WHERE id IN (\n" +
+                        "            SELECT id FROM trash WHERE name LIKE "
+        );
+        int im = 0;
+        for (String word : words_set){
+            queryBuilder.append("'%" + word + "%'");
+            if (im != words_set.size() - 1) {
+                queryBuilder.append(" OR name LIKE ");
+            }
+            im++;
+        }
+        queryBuilder.append(")\n" +
+                "        )\n" +
+                "    )");
+        System.out.println(queryBuilder.toString());
+        if (name == null) {
+            System.out.println("Нам нужно выкинуть в другой мусорник ");
+        }
+
         return name;
     }
 }

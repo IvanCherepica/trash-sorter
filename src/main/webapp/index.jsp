@@ -27,14 +27,6 @@
 
 <body>
 
-<!-- Navigation -->
-<nav class="navbar navbar-light bg-light static-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Trashsorter</a>
-
-        <a class="btn btn-primary" href="#">Войти</a>
-    </div>
-</nav>
 
 <!-- Modal -->
 
@@ -63,64 +55,6 @@
         </div>
     </div>
 </div>
-
-
-<%--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">--%>
-<%--    <div class="modal-dialog" role="document">--%>
-<%--        <div class="modal-content">--%>
-<%--            <div class="modal-header" c1>--%>
-<%--                <h5 class="modal-title" id="exampleModalLabel">Информация о мусоре</h5>--%>
-<%--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">--%>
-<%--                    <span aria-hidden="true">&times;</span>--%>
-<%--                </button>--%>
-<%--            </div>--%>
-<%--            <div class="modal-body" >--%>
-
-<%--                <div class="container-fluid">--%>
-<%--                    <div class="row">--%>
-<%--                        <div class="col-md-12" id="a1">--%>
-<%--                            <img src="img/loading.gif" align="center" width="290px">--%>
-
-<%--                            </div>--%>
-<%--                    </div>--%>
-
-<%--                </div>--%>
-<%--            </div>--%>
-<%--            <div class="modal-footer">--%>
-
-<%--                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</div>--%>
-<%--<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">--%>
-<%--    <div class="modal-dialog" role="document">--%>
-<%--        <div class="modal-content">--%>
-<%--            <div class="modal-header">--%>
-<%--                <h5 class="modal-title" id="exampleModalLabel2">Информация о мусоре</h5>--%>
-<%--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">--%>
-<%--                    <span aria-hidden="true">&times;</span>--%>
-<%--                </button>--%>
-<%--            </div>--%>
-<%--            <div class="modal-body">--%>
-
-<%--                <div class="container-fluid">--%>
-<%--                    <div class="row">--%>
-<%--                        <div class="col-md-12" >--%>
-<%--                        <h4><strong>ВЫ НЕ МОЖЕТЕ ВЫКИДЫВАТЬ МУСОР</strong></h4>--%>
-<%--                        <img src="img/no.png">--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-
-<%--                </div>--%>
-<%--            </div>--%>
-<%--            <div class="modal-footer">--%>
-
-<%--                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</div>--%>
 
 
 
@@ -194,7 +128,7 @@
     <div class="container-fluid p-0">
         <div class="row no-gutters">
 
-            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/img1.jpg');"></div>
             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                 <h2>Бак по бумаге</h2>
                 <p class="lead mb-0">Выберите фото со штрихкодом или сфотографируйте шрихкод на мусоре</p>
@@ -208,7 +142,7 @@
             </div>
         </div>
         <div class="row no-gutters">
-            <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+            <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/img2.jpg');"></div>
             <div class="col-lg-6 my-auto showcase-text">
                 <h2>Бак по стеклу</h2>
                 <p class="lead mb-0">Выберите фото со штрихкодом или сфотографируйте шрихкод на мусоре</p>
@@ -222,9 +156,9 @@
             </div>
         </div>
         <div class="row no-gutters">
-            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/img3.jpg');"></div>
             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                <h2>Бак по пластмасе</h2>
+                <h2>Бак по пластмассе</h2>
                 <p class="lead mb-0">Выберите фото со штрихкодом или сфотографируйте шрихкод на мусоре</p>
                 <p class="lead mb-0">Загрузите изображение черех кнопку "Загрузить"</p>
                 <p class="lead mb-0">Откроется дополнительное окно, для потверждения информации о мусоре</p>
@@ -235,6 +169,21 @@
                 <p class="lead mb-0">После подтверждения придет уведомление можно выкинуть или нет</p>
             </div>
         </div>
+        <div class="row no-gutters">
+            <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/img4.jpg');"></div>
+            <div class="col-lg-6 my-auto showcase-text" style="background-image: url('img/img4.jpg');"></div>
+                <h2>Бак по металлу</h2>
+            <p class="lead mb-0">Выберите фото со штрихкодом или сфотографируйте шрихкод на мусоре</p>
+            <p class="lead mb-0">Загрузите изображение черех кнопку "Загрузить"</p>
+            <p class="lead mb-0">Откроется дополнительное окно, для потверждения информации о мусоре</p>
+            <p class="lead mb-0">После подтверждения придет уведомление можно выкинуть или нет</p>
+            <p class="lead mb-0">Выберите фото со штрихкодом или сфотографируйте шрихкод на мусоре</p>
+            <p class="lead mb-0">Загрузите изображение черех кнопку "Загрузить"</p>
+            <p class="lead mb-0">Откроется дополнительное окно, для потверждения информации о мусоре</p>
+            <p class="lead mb-0">После подтверждения придет уведомление можно выкинуть или нет</p>
+            </div>
+        </div>
+
     </div>
 </section>
 

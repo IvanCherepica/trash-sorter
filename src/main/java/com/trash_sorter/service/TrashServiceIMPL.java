@@ -102,7 +102,7 @@ public class TrashServiceIMPL implements TrashService {
     @Override
     public boolean addNewTrash(Trash trashName) {
         return dao.addNewTrash(trashName);
-    }
+}
 
     @Override
     public boolean addNewCategory(long trash_id, long cat_id) {

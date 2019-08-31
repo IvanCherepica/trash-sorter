@@ -26,13 +26,6 @@
     <link href="css/landing-page.min.css" rel="stylesheet">
 </head>
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-light bg-light static-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Trashsorter</a>
-        <a class="btn btn-primary" href="#">Выход</a>
-    </div>
-</nav>
 
 
 <section class="features-icons bg-light text-center">
