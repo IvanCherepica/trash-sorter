@@ -65,7 +65,7 @@ public class TrashServiceIMPL implements TrashService {
                     .parse(new InputSource(new StringReader(response1.toString())));
 
             for (int i=0; i<result.length; i++) {
-                result[i] = "Наименование товара - "
+                result[i] = ""
                         + doc.getElementsByTagName("title").item(i).getTextContent();
                 System.out.println(result[i]);
             }

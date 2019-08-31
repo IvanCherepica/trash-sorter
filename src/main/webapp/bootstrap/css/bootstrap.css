@@ -35,6 +35,34 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.mask-wrapper {
+    height: 37px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.mask-wrapper .send-file {
+    padding: 3px 20px;
+    margin-left: 3px;
+    color: #fff;
+    background-color: #ccc;
+}
+.mask-wrapper .fileInputText {
+    position: relative;
+    width: 133px;
+    top: 3px;
+}
+.custom-file-input {
+    width: 252px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: relative;
+    top: -27px;
+    left: -16px;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+
 *,
 *::before,
 *::after {

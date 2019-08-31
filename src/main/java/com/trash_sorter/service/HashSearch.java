@@ -5,14 +5,17 @@ import java.util.HashSet;
 import java.util.List;
 
 public class HashSearch {
+    public static void main(String[] args) {
+        search(Arrays.asList(new String[] {"q", "w"}), new String[] {"q", "w"});
+    }
     /**@param trash_list - данные из базы
      * @param net_array - массив результатов поиска
      * идея: т.к. hashset использует для проверки наличия hashcode() и equal() (вроде как)
      * то быстрее будет это использовать для нахождения уникальныого мусора
      * @return boolean, но это нужно изменить в соответствии с логикой  общения с бд
      * */
-    public static boolean search(List<String> trash_list, String[] net_array){
-
+    public static String search(List<String> trash_list, String[] net_array){
+        String name = null;
         boolean can_drop = false;
         HashSet<String> words_set = new HashSet<>();
 
@@ -34,9 +37,10 @@ public class HashSearch {
             for (String trash : trash_set) {
                 if (word.contains(trash)) {
                     can_drop = true;
+                    name = word;
                 }
             }
         }
-        return can_drop;
+        return name;
     }
 }
