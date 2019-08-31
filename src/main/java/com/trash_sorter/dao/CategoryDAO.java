@@ -11,4 +11,5 @@ public interface CategoryDAO {
     Category getCategoryById(long id);
     List<String> getCategoriesName();
     List<Category> getAllCategories();
+    List<Category> getAllCategoryByTankId(long tankId);
 }

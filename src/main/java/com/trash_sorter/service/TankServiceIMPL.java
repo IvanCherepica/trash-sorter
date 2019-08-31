@@ -11,7 +11,6 @@ import java.util.List;
 public class TankServiceIMPL implements TankService {
     DbHelper helper = DbHelper.getInstance(Builder.getConfiguration());
     private final TankDAO dao;
-
     private static volatile TankServiceIMPL instance;
     private TankServiceIMPL(){
         this.dao = new TankDaoImpl(helper.getFactory());
@@ -25,24 +24,28 @@ public class TankServiceIMPL implements TankService {
         }
         return instance;
     }
-
     @Override
     public boolean addNewTank(Tank tankName) {
         return dao.addNewTank(tankName);
     }
-
     @Override
     public boolean deleteTank(Tank tank) {
         return dao.deleteTank(tank);
     }
-
     @Override
     public Tank getTankById(long id) {
         return dao.getTankById(id);
     }
-
     @Override
     public List<Tank> getTanks() {
         return dao.getTanks();
+    }
+    @Override
+    public Tank getTankByName(String name) {
+        return dao.getTankByName(name);
+    }
+    @Override
+    public boolean addQR(String qr, long id) {
+        return dao.addQR(qr,id);
     }
 }

@@ -2,6 +2,7 @@ package com.trash_sorter.dao;
 
 
 import com.trash_sorter.model.Category;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -82,6 +83,25 @@ public class CategoryDaoImpl implements CategoryDAO {
             categories = (List<Category>) session.createQuery(
                     "from Category"
             ).list();
+        }finally {
+            session.close();
+        }
+        return categories;
+    }
+
+    @Override
+    public List<Category> getAllCategoryByTankId(long tankId) {
+        Session session = factory.openSession();
+        List<Category> categories = null;
+        try{
+
+            Query query = session.createSQLQuery(
+                    "SELECT * FROM categories c WHERE c.id IN (\n" +
+                            "    SELECT tac.category_id FROM tanks_and_cats tac WHERE tac.tank_id=?\n" +
+                            "    )");
+            query.setParameter(0, tankId);
+            categories = (List<Category>) query.list();
+
         }finally {
             session.close();
         }

@@ -10,4 +10,5 @@ public interface CategoryService {
     Category getCategoryById(long id);
     List<String> getCategoriesName();
     List<Category> getAllCategories();
+    List<Category> getAllCategoryByTankId(long tankId);
 }

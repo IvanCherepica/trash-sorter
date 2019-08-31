@@ -49,4 +49,9 @@ public class CategoryServiceImpl implements CategoryService {
     public List<Category> getAllCategories() {
         return dao.getAllCategories();
     }
+
+    @Override
+    public List<Category> getAllCategoryByTankId(long tankId) {
+        return dao.getAllCategoryByTankId(tankId);
+    }
 }
