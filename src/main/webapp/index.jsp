@@ -13,6 +13,7 @@
     <title>Trashsorter</title>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7/dist/dbr.min.js" data-productKeys="t0068NQAAABlYrAlwmz2H9BHvuIS4k0Q+zj50En/ivBru9D5GH26Q4uTzr30pdAenDwBAmm3HU28X4ltHqXoEL22UeVLoeDw="></script>
     <!-- Bootstrap core CSS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
